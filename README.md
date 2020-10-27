@@ -7,20 +7,20 @@
     <a href="LICENSE">
       <image src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License">
     </a>
-    <a href="https://travis-ci.org/freyo/flysystem-qcloud-cos-v5">
-      <image src="https://img.shields.io/travis/freyo/flysystem-qcloud-cos-v5/master.svg?style=flat-square" alt="Build Status">
+    <a href="https://travis-ci.org/silverd/flysystem-qcloud-cos-v5">
+      <image src="https://img.shields.io/travis/silverd/flysystem-qcloud-cos-v5/master.svg?style=flat-square" alt="Build Status">
     </a>
-    <a href="https://scrutinizer-ci.com/g/freyo/flysystem-qcloud-cos-v5">
-      <image src="https://img.shields.io/scrutinizer/coverage/g/freyo/flysystem-qcloud-cos-v5.svg?style=flat-square" alt="Coverage Status">
+    <a href="https://scrutinizer-ci.com/g/silverd/flysystem-qcloud-cos-v5">
+      <image src="https://img.shields.io/scrutinizer/coverage/g/silverd/flysystem-qcloud-cos-v5.svg?style=flat-square" alt="Coverage Status">
     </a>
-    <a href="https://scrutinizer-ci.com/g/freyo/flysystem-qcloud-cos-v5">
-      <image src="https://img.shields.io/scrutinizer/g/freyo/flysystem-qcloud-cos-v5.svg?style=flat-square" alt="Quality Score">
+    <a href="https://scrutinizer-ci.com/g/silverd/flysystem-qcloud-cos-v5">
+      <image src="https://img.shields.io/scrutinizer/g/silverd/flysystem-qcloud-cos-v5.svg?style=flat-square" alt="Quality Score">
     </a>
-    <a href="https://packagist.org/packages/freyo/flysystem-qcloud-cos-v5">
-      <image src="https://img.shields.io/packagist/v/freyo/flysystem-qcloud-cos-v5.svg?style=flat-square" alt="Packagist Version">
+    <a href="https://packagist.org/packages/silverd/flysystem-qcloud-cos-v5">
+      <image src="https://img.shields.io/packagist/v/silverd/flysystem-qcloud-cos-v5.svg?style=flat-square" alt="Packagist Version">
     </a>
-    <a href="https://packagist.org/packages/freyo/flysystem-qcloud-cos-v5">
-      <image src="https://img.shields.io/packagist/dt/freyo/flysystem-qcloud-cos-v5.svg?style=flat-square" alt="Total Downloads">
+    <a href="https://packagist.org/packages/silverd/flysystem-qcloud-cos-v5">
+      <image src="https://img.shields.io/packagist/dt/silverd/flysystem-qcloud-cos-v5.svg?style=flat-square" alt="Total Downloads">
     </a>
   </p>
   <p align="center">
@@ -33,7 +33,7 @@
 ## Installation
 
   ```shell
-  composer require "freyo/flysystem-qcloud-cos-v5:^2.0" -vvv
+  composer require "silverd/flysystem-qcloud-cos-v5:^2.0" -vvv
   ```
 
 ## Bootstrap
@@ -63,7 +63,7 @@
       'cdn_key'         => '',
       'encrypt'         => false,
   ];
-  
+
   $client     = new Client($config);
   $adapter    = new Adapter($client, $config);
   $filesystem = new Filesystem($adapter);
@@ -96,9 +96,9 @@ array $flysystem->getMetadata('file.md');
 
 int $flysystem->getSize('file.md');
 
-string $flysystem->getUrl('file.md'); 
+string $flysystem->getUrl('file.md');
 
-string $flysystem->getTemporaryUrl('file.md', date_create('2018-12-31 18:12:31')); 
+string $flysystem->getTemporaryUrl('file.md', date_create('2018-12-31 18:12:31'));
 
 string $flysystem->getMimetype('file.md');
 
@@ -112,7 +112,7 @@ bool $flysystem->setVisibility('file.md', 'public'); //or 'private', 'default'
 [Full API documentation.](http://flysystem.thephpleague.com/api/)
 
 ## Use in Laravel
-  
+
 **Laravel 5.5+ uses Package Auto-Discovery, so doesn't require you to manually add the ServiceProvider.**
 
 1. Register the service provider in `config/app.php`:
@@ -151,7 +151,7 @@ bool $flysystem->setVisibility('file.md', 'public'); //or 'private', 'default'
   ```
 
 3. Configure `.env`:
-  
+
   ```php
   COSV5_APP_ID=
   COSV5_SECRET_ID=
@@ -184,13 +184,13 @@ bool $flysystem->setVisibility('file.md', 'public'); //or 'private', 'default'
   ```
 
 2. And this:
-  
+
   ```php
   $app->register(Freyo\Flysystem\QcloudCOSv5\ServiceProvider::class);
   ```
 
 3. Configure `.env`:
-  
+
   ```php
   COSV5_APP_ID=
   COSV5_SECRET_ID=
